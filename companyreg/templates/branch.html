@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+
+      <body>
+      <h1>welcome</h1>
+     
+        {{emp.email}}
+        <td><img src="{{emp.logo.url}}" height="150px" width="250" alt=""></td>
+      
+
+
+        <table class="table table-info mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">branchname</th>
+              <th scope="col">businessname</th>
+      
+              <th scope="col">Email</th>
+              <th scope="col">password</th>
+              <th scope="col">phone</th>
+              <th scope="col">website</th>
+      
+              <th scope="col">city</th>
+              <th scope="col">state</th>
+              <th scope="col">country</th>
+              <th scope="col">pin</th>
+              <th scope="col">image</th>
+              
+             
+      
+            </tr>
+          </thead>
+          <tbody>
+              {% for i in mem %}
+            <tr>
+              <th scope="row">{{i.branchid}}</th>
+              <td>{{i.branchname}}</td>
+              <td>{{i.businessname}}</td>
+      
+              <td>{{i.email}}</td>
+              <td>{{i.password}}</td>
+              <td>{{i.mobno}}</td>
+              <td>{{i.website}}</td>
+      
+              <td>{{i.city}}</td>
+              <td>{{i.state}}</td>
+              <td>{{i.country}}</td>
+              <td>{{i.pincode}}</td>
+              <td><img src="{{i.logo.url}}" alt="a snow-capped mountain range" style="height: 20px;" /></td>
+      
+             
+      
+            </tr>
+
+      
+            {% endfor %}
+
+
+      </body>
+      
+{% endblock %}

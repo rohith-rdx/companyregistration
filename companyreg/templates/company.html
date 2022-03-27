@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6 mt-5 ">
+            <div class="card p-3 border-dark bg-dark">
+                <form action="register" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <center>
+                                <h2>Registration form</h2>
+                            </center>
+                        </div>
+                        
+                        <div class="col-md-12 mt-3" >
+                            <label for="">company Name</label>
+                            <input type="text" name="cmpnyname" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">company type</label>
+                            <input type="text" name="type" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">Business name</label>
+                            <input type="text" name="businessname" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <label for="">email</label>
+                            <input type="text" name="email" class="form-control border-dark">
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <label for=""> mobile no</label>
+                            <input type="number" name="mobno" class="form-control border-dark">
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">website</label>
+                            <input type="text" name="website" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">city</label>
+                            <input type="text" name="city" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">state</label>
+                            <input type="text" name="state" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">country</label>
+                            <input type="text" name="country" class="form-control border-dark">
+                            
+                        </div>
+                        <div class="col-md-12 mt-3" >
+                            <label for="">pincode</label>
+                            <input type="text" name="pincode" class="form-control border-dark">
+                            
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <label for=""> logo</label>
+                            <input type="file" name="logo" class="form-control ">
+                        </div>
+                        
+                        <div class="col-md-12 mt-3 mb-3">
+                            <button class="btn btn-info w-100 " type="submit">submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
